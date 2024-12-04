@@ -1,0 +1,98 @@
+/* General container style */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  /* Button Styles */
+  .button {
+    position: relative;
+    width: 250px;
+    height: 60px;
+    margin: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+  }
+
+  
+  /* Common button background style */
+  .button-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button-text {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .button:hover .button-background {
+    background: #fff;
+    opacity: 0.1;
+  }
+  
+  .button:hover .button-text {
+    color: #ff8c00;
+  }
+  
+  /* Add hover effect for each button */
+  .settings:hover .button-background {
+    background: #ff6f00;
+  }
+  
+  .exit:hover .button-background {
+    background: #c82333;
+  }
+  
+  .levels:hover .button-background {
+    background: #218838;
+  }
+  
+  /* Button Text Hover Animation */
+  .button-text:hover {
+    color: #ff8c00;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+    .button {
+      width: 200px;
+      height: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .button {
+      width: 150px;
+      height: 40px;
+    }
+  }
+  
